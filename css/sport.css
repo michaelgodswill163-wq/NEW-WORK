@@ -1,0 +1,39 @@
+/* Add these to your existing styles.css */
+.login-message {
+    text-align: center;
+    margin-top: 5rem;
+    color: #1a3a6e;
+    background-color: red;
+}
+
+.error-message {
+    color: #f44336;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#user-info span {
+    font-weight: bold;
+}
+
+#logout-btn {
+    padding: 0.5rem 1rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#logout-btn:hover {
+    background-color: #d32f2f;
+}

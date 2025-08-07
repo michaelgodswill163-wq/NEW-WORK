@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sporty Bet - Sports Betting</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="sport.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Sporty<span>Bet</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Sports</a></li>
+                <li><a href="#">Live</a></li>
+                <li><a href="#">Promotions</a></li>
+                <li><a href="#">Results</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <div id="user-info" style="display: none;">
+                <span id="username-display"></span>
+                <button id="logout-btn">Logout</button>
+            </div>
+            <div id="auth-buttons">
+                <button id="login-btn">Login</button>
+                <button id="register-btn">Register</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="account-balance" id="account-balance" style="display: none;">
+        <span>Balance: $<span id="balance">0.00</span></span>
+    </div>
+
+    <main id="main-content">
+        <!-- Content will be loaded here based on authentication -->
+        <div class="login-message">
+            <h2>Welcome to SportyBet</h2>
+            <p>Please login or register to start betting</p>
+        </div>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="Username" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <p id="login-error" class="error-message"></p>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="register-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Register</h2>
+            <form id="register-form">
+                <input type="text" id="register-username" placeholder="Username" required minlength="4">
+                <input type="email" id="register-email" placeholder="Email" required>
+                <input type="password" id="register-password" placeholder="Password" required minlength="6">
+                <input type="password" id="register-confirm-password" placeholder="Confirm Password" required>
+                <p id="register-error" class="error-message"></p>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
